@@ -1,4 +1,9 @@
 
-<h1>
-	Welcome in bills saver application
-</h1>
+<h3>
+	Welcome in home page
+</h3>
+
+  <% unless  current_user %>
+    <%= link_to "Sign in", new_user_session_path, method: :get %>
+    <%= link_to "Sign up", new_user_registration_path, method: :get %>
+  <% end %>
